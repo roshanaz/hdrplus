@@ -1,0 +1,31 @@
+{
+ "generator_name" : "align_and_merge",
+ "function_name" : "align_and_merge",
+ "target" : "x86-64-linux-avx-avx2-f16c-fma-no_runtime-sse41",
+ "object_code_size" : 106720,
+ "compilation_time_halide_lowering" : 0.302273,
+ "compilation_time_llvm" : 2.32977,
+ "failed_to_prove" : {
+  "(let v0 = min((max((v2/16), 2049) + -1), ((v2/16) + v3)) in (min(((v1 + -32783)/16), ((v2/16) + v3)) <= v0))" : 
+  [
+   "(let t502 = min(max(max(0, 2048), ((merge_spatial_output.min.0/16) + -1)), ((merge_temporal_output.s0.v80.loop_extent.s + 1) + ((merge_spatial_output.min.0/16) + -1))) in (max((min(min(min(min(min(min(min(((inputs.extent.0/16) + -2), ((inputs.extent.0/16) + -2)), ((inputs.extent.0/16) + -2)), ((inputs.extent.0 + -32799)/16)), ((inputs.extent.0 + -32799)/16)), ((inputs.extent.0 + -1)/16)), ((inputs.extent.0 + 32767)/16)), ((((merge_spatial_output.min.0/16) + -1) + (merge_temporal_output.s0.v80.loop_extent.s + 1)) - 1)) + 1), t502) <= t502))",
+   "(let t503 = min(max(max(0, 2048), ((merge_spatial_output.min.1/16) + -1)), ((merge_temporal_output.s0.v81.loop_extent.s + 1) + ((merge_spatial_output.min.1/16) + -1))) in (max((min(min(min(min(min(min(min(((inputs.extent.1/16) + -2), ((inputs.extent.1/16) + -2)), ((inputs.extent.1/16) + -2)), ((inputs.extent.1 + -32799)/16)), ((inputs.extent.1 + -32799)/16)), ((inputs.extent.1 + -1)/16)), ((inputs.extent.1 + 32767)/16)), ((((merge_spatial_output.min.1/16) + -1) + (merge_temporal_output.s0.v81.loop_extent.s + 1)) - 1)) + 1), t503) <= t503))"
+  ],
+  "(v0 != 0)" : 
+  [
+   "(t1249 != 0)",
+   "(t1324 != 0)",
+   "(t1574 != 0)"
+  ],
+  "x16((v0 != 0))" : 
+  [
+   "(x16(t1252) != x16(0))",
+   "(x16(t1327) != x16(0))"
+  ],
+  "x32((v0 != 0))" : 
+  [
+   "(x32(t1572) != x32(0))"
+  ]
+ },
+ "version": "HalideJSONCompilerLoggerV1"
+}

@@ -1,0 +1,1 @@
+/usr/bin/c++     CMakeFiles/align_and_merge.generator_binary.dir/root/Halide/tools/GenGen.cpp.o  -o align_and_merge.generator_binary   -L/root/Halide/lib  -L/root/Halide/bin  -Wl,-rpath,/root/Halide/lib:/root/Halide/bin -ldl -lpthread -Wl,--whole-archive libalign_and_merge.generator_library.a -Wl,-no-whole-archive /root/Halide/bin/libHalide.so 

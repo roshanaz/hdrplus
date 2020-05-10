@@ -1,0 +1,1 @@
+/usr/bin/c++     CMakeFiles/hdrplus_pipeline.generator_binary.dir/root/Halide/tools/GenGen.cpp.o  -o hdrplus_pipeline.generator_binary   -L/root/Halide/lib  -L/root/Halide/bin  -Wl,-rpath,/root/Halide/lib:/root/Halide/bin -ldl -lpthread -Wl,--whole-archive libhdrplus_pipeline.generator_library.a -Wl,-no-whole-archive /root/Halide/bin/libHalide.so 

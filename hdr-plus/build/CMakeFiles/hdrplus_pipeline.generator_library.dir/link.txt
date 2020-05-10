@@ -1,0 +1,2 @@
+/usr/bin/ar qc libhdrplus_pipeline.generator_library.a  CMakeFiles/hdrplus_pipeline.generator_library.dir/src/hdrplus_pipeline_generator.cpp.o CMakeFiles/hdrplus_pipeline.generator_library.dir/src/align.cpp.o CMakeFiles/hdrplus_pipeline.generator_library.dir/src/merge.cpp.o CMakeFiles/hdrplus_pipeline.generator_library.dir/src/finish.cpp.o CMakeFiles/hdrplus_pipeline.generator_library.dir/src/util.cpp.o
+/usr/bin/ranlib libhdrplus_pipeline.generator_library.a

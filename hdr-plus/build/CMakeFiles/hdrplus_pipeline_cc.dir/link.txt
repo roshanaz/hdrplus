@@ -1,0 +1,2 @@
+/usr/bin/ar qc libhdrplus_pipeline_cc.a  CMakeFiles/hdrplus_pipeline_cc.dir/genfiles/hdrplus_pipeline/hdrplus_pipeline.halide_generated.cpp.o
+/usr/bin/ranlib libhdrplus_pipeline_cc.a

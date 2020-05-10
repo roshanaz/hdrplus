@@ -1,0 +1,71 @@
+{
+ "generator_name" : "hdrplus_pipeline",
+ "function_name" : "hdrplus_pipeline",
+ "target" : "x86-64-linux-avx-avx2-f16c-fma-no_runtime-sse41",
+ "object_code_size" : 392616,
+ "compilation_time_halide_lowering" : 3.44491,
+ "compilation_time_llvm" : 7.88553,
+ "non_monotonic_loop_vars" : {
+  "img1_layer_0$1.s0.v332.v332" : 
+  [
+   "(let t2583 = min(max(gamma_correct_output$5.s0.v437.max.s, 1), ((max(gamma_correct_output$5.s0.v437.min.s, 6) + (img1_layer_0$1.s0.v332.v332*128)) + 116)) in (let t2584 = min(max(t2583, 128), (t2583 + 134)) in max((min((t2583 + 6), inputs.extent.1) - t2584), -128)))",
+   "(let t2586 = min(max(gamma_correct_output$5.s0.v437.max.s, 1), ((max(gamma_correct_output$5.s0.v437.min.s, 6) + (img1_layer_0$1.s0.v332.v332*128)) + 116)) in (t2586 - max(min((t2586 + 6), inputs.extent.1), (min(max(t2586, 128), (t2586 + 134)) + -128))))"
+  ],
+  "img1_layer_0$2.s0.v444.v444" : 
+  [
+   "(let t2599 = min(((img1_layer_0$2.s0.v444.v444*128) + 122), _8bit_interleaved_output.extent.2) in (let t2600 = min(max((_8bit_interleaved_output.min.2 + t2599), 128), ((_8bit_interleaved_output.min.2 + t2599) + 134)) in max((min(((_8bit_interleaved_output.min.2 + t2599) + 6), inputs.extent.1) - t2600), -128)))",
+   "(let t2602 = min(((img1_layer_0$2.s0.v444.v444*128) + 122), _8bit_interleaved_output.extent.2) in ((t2602 - max(min(((_8bit_interleaved_output.min.2 + t2602) + 6), inputs.extent.1), (min(max((_8bit_interleaved_output.min.2 + t2602), 128), ((_8bit_interleaved_output.min.2 + t2602) + 134)) + -128))) + _8bit_interleaved_output.min.2))"
+  ],
+  "img1_layer_0.s0.v220.v220" : 
+  [
+   "(let t2567 = min(max(gamma_correct_output$3.s0.v325.max.s, 1), ((max(gamma_correct_output$3.s0.v325.min.s, 12) + (img1_layer_0.s0.v220.v220*128)) + 110)) in (let t2568 = min(max(t2567, 128), (t2567 + 134)) in max((min((t2567 + 6), inputs.extent.1) - t2568), -128)))",
+   "(let t2570 = min(max(gamma_correct_output$3.s0.v325.max.s, 1), ((max(gamma_correct_output$3.s0.v325.min.s, 12) + (img1_layer_0.s0.v220.v220*128)) + 110)) in (t2570 - max(min((t2570 + 6), inputs.extent.1), (min(max(t2570, 128), (t2570 + 134)) + -128))))"
+  ],
+  "img2_layer_0$1.s0.v346.v346" : 
+  [
+   "(let t2591 = min(max(gamma_correct_output$5.s0.v437.max.s, 1), ((max(gamma_correct_output$5.s0.v437.min.s, 6) + (img2_layer_0$1.s0.v346.v346*128)) + 116)) in (let t2592 = min(max(t2591, 128), (t2591 + 134)) in max((min((t2591 + 6), inputs.extent.1) - t2592), -128)))",
+   "(let t2594 = min(max(gamma_correct_output$5.s0.v437.max.s, 1), ((max(gamma_correct_output$5.s0.v437.min.s, 6) + (img2_layer_0$1.s0.v346.v346*128)) + 116)) in (t2594 - max(min((t2594 + 6), inputs.extent.1), (min(max(t2594, 128), (t2594 + 134)) + -128))))"
+  ],
+  "img2_layer_0$2.s0.v458.v458" : 
+  [
+   "(let t2607 = min(((img2_layer_0$2.s0.v458.v458*128) + 122), _8bit_interleaved_output.extent.2) in (let t2608 = min(max((_8bit_interleaved_output.min.2 + t2607), 128), ((_8bit_interleaved_output.min.2 + t2607) + 134)) in max((min(((_8bit_interleaved_output.min.2 + t2607) + 6), inputs.extent.1) - t2608), -128)))",
+   "(let t2610 = min(((img2_layer_0$2.s0.v458.v458*128) + 122), _8bit_interleaved_output.extent.2) in ((t2610 - max(min(((_8bit_interleaved_output.min.2 + t2610) + 6), inputs.extent.1), (min(max((_8bit_interleaved_output.min.2 + t2610), 128), ((_8bit_interleaved_output.min.2 + t2610) + 134)) + -128))) + _8bit_interleaved_output.min.2))"
+  ],
+  "img2_layer_0.s0.v234.v234" : 
+  [
+   "(let t2575 = min(max(gamma_correct_output$3.s0.v325.max.s, 1), ((max(gamma_correct_output$3.s0.v325.min.s, 12) + (img2_layer_0.s0.v234.v234*128)) + 110)) in (let t2576 = min(max(t2575, 128), (t2575 + 134)) in max((min((t2575 + 6), inputs.extent.1) - t2576), -128)))",
+   "(let t2578 = min(max(gamma_correct_output$3.s0.v325.max.s, 1), ((max(gamma_correct_output$3.s0.v325.min.s, 12) + (img2_layer_0.s0.v234.v234*128)) + 110)) in (t2578 - max(min((t2578 + 6), inputs.extent.1), (min(max(t2578, 128), (t2578 + 134)) + -128))))"
+  ]
+ },
+ "failed_to_prove" : {
+  "(((v0 + -32799)/16) <= min((v0/16), 2047))" : 
+  [
+   "(let t1792 = min(max(max(0, 2048), -1), (((inputs.extent.0/16) + 2) + -1)) in (max((min(min(min(min(min(min(min(((inputs.extent.0/16) + -2), ((inputs.extent.0/16) + -2)), ((inputs.extent.0/16) + -2)), ((inputs.extent.0 + -32799)/16)), ((inputs.extent.0 + -32799)/16)), ((inputs.extent.0 + -1)/16)), ((inputs.extent.0 + 32767)/16)), ((-1 + ((inputs.extent.0/16) + 2)) - 1)) + 1), t1792) <= t1792))",
+   "(let t1793 = min(max(max(0, 2048), -1), (((inputs.extent.1/16) + 2) + -1)) in (max((min(min(min(min(min(min(min(((inputs.extent.1/16) + -2), ((inputs.extent.1/16) + -2)), ((inputs.extent.1/16) + -2)), ((inputs.extent.1 + -32799)/16)), ((inputs.extent.1 + -32799)/16)), ((inputs.extent.1 + -1)/16)), ((inputs.extent.1 + 32767)/16)), ((-1 + ((inputs.extent.1/16) + 2)) - 1)) + 1), t1793) <= t1793))"
+  ],
+  "(v0 != 0)" : 
+  [
+   "(t3591 != 0)",
+   "(t3671 != 0)",
+   "(t3902 != 0)",
+   "(t4120 != 0)",
+   "(t4199 != 0)",
+   "(t4278 != 0)",
+   "(t4357 != 0)"
+  ],
+  "x16((v0 != 0))" : 
+  [
+   "(x16(t3593) != x16(0))",
+   "(x16(t3673) != x16(0))",
+   "(x16(t4126) != x16(0))",
+   "(x16(t4205) != x16(0))",
+   "(x16(t4284) != x16(0))",
+   "(x16(t4363) != x16(0))"
+  ],
+  "x32((v0 != 0))" : 
+  [
+   "(x32(t3900) != x32(0))"
+  ]
+ },
+ "version": "HalideJSONCompilerLoggerV1"
+}

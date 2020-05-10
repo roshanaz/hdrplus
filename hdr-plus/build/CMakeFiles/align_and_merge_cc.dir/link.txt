@@ -1,0 +1,2 @@
+/usr/bin/ar qc libalign_and_merge_cc.a  CMakeFiles/align_and_merge_cc.dir/genfiles/align_and_merge/align_and_merge.halide_generated.cpp.o
+/usr/bin/ranlib libalign_and_merge_cc.a
