@@ -1,0 +1,53 @@
+/////////////////cmake installation
+version=3.17
+build=2
+mkdir ~/temp
+cd ~/temp
+wget https://cmake.org/files/v$version/cmake-$version.$build.tar.gz
+tar -xzvf cmake-$version.$build.tar.gz
+cd cmake-$version.$build/
+./bootstrap
+make -j$(nproc)
+make install
+
+cp bin/cmake /usr/local/bin/
+cmake --version
+
+//////////////llvm
+https://github.com/halide/Halide/tree/9c3b280c9e6fd21736b1ce5f869887a73da3c355
+% git clone https://github.com/llvm/llvm-project.git
+% git checkout release/9.x  # to build LLVM 9.x
+
+% cd llvm-project
+% mkdir build
+% mkdir install
+% cd build
+% cmake -DLLVM_ENABLE_PROJECTS="clang;lld;clang-tools-extra" -DLLVM_ENABLE_RTTI=ON -DLLVM_ENABLE_TERMINFO=OFF -DLLVM_TARGETS_TO_BUILD="X86;ARM;NVPTX;AArch64;Mips;PowerPC;Hexagon" -DLLVM_ENABLE_ASSERTIONS=ON -DCMAKE_BUILD_TYPE=Release -DLLVM_BUILD_32_BITS=OFF -DCMAKE_INSTALL_PREFIX=../install ../llvm
+% make install -j8
+
+LLVM_CONFIG=/root/llvm-project/build/bin/llvm-config
+CLANG=/root/llvm-project/build/bin/clang
+
+//might not be necessary
+//CXX=clang++ CC=clang
+
+///////////////Halide
+git clone https://github.com/halide/Halide.git
+//git reset --hard ebbd6a84e0541fe7c8f96fdffde54ba9169b0571
+cd Halide
+make
+
+////////////image libraries
+apt-get update && apt-get install -y libraw-dev libpng-dev libjpeg-dev libtiff-dev
+
+///////////hdr+
+git clone https://github.com/timothybrooks/hdr-plus.git
+//git reset --hard 37431dd52e9fe880c9d650ba3532fa951b8151e8
+
+mkdir build
+cd build
+cmake -DHALIDE_DISTRIB_DIR=/root/Halide ..
+make
+//if make fails with libz.io -lz was  missing
+//{/usr/bin/c++     CMakeFiles/hdrplus.dir/bin/HDRPlus.cpp.o CMakeFiles/hdrplus.dir/src/InputSource.cpp.o CMakeFiles/hdrplus.dir/src/Burst.cpp.o CMakeFiles/hdrplus.dir/src/LibRaw2DngConverter.cpp.o  -o hdrplus   -L/root/Halide/lib  -L/root/Halide/bin  -Wl,-rpath,/root/Halide/lib:/root/Halide/bin ./genfiles/hdrplus_pipeline/hdrplus_pipeline.a -lHalide -lpng /usr/lib/x86_64-linux-gnu/libraw.so /usr/lib/x86_64-linux-gnu/libtiff.so /usr/lib/x86_64-linux-gnu/libtiffxx.so ./genfiles/halide_rt_host/halide_rt_host.a -ldl -lpthread -lz}
+
